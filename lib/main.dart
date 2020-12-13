@@ -57,6 +57,19 @@ class Settings extends StatelessWidget {
                               ),
                             ]
                           ),
+                          Row(
+                              children: [
+                                // This part of the code doesn't work just yet,
+                                // we need connectivity package for that
+                                Text('Only update via WiFi'),
+                                Switch(
+                                  value: box.get('onlyWifiUpdate', defaultValue: false),
+                                  onChanged: (val) {
+                                    box.put('onlyWifiUpdate', val);
+                                  },
+                                ),
+                              ]
+                          ),
                           Row (
                               children: [
                                 Text('Username'),
