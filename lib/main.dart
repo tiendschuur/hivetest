@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -10,6 +12,12 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
+  MyApp() {
+    Timer.periodic(Duration(seconds: 60), (timer) {
+      print('We are here because we are here');
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
